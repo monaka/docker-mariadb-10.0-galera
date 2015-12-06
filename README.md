@@ -56,10 +56,10 @@ docker run -d --net=host --privileged=true --volumes-from server1-mariadb-config
 Start server2 and server 3 with :
 ```
 # server 2
-docker run -d --net=host --privileged=true --volumes-from server2-mariadb-config --volumes-from server2-mariadb-data --name mariadb-srv-2 factual/mariadb-galera /bin/start new
+docker run -d --net=host --privileged=true --volumes-from server2-mariadb-config --volumes-from server2-mariadb-data --name mariadb-srv-2 factual/mariadb-galera /bin/start node
 
 # server 3
-docker run -d --net=host --privileged=true --volumes-from server3-mariadb-config --volumes-from server3-mariadb-data --name mariadb-srv-3 factual/mariadb-galera /bin/start new
+docker run -d --net=host --privileged=true --volumes-from server3-mariadb-config --volumes-from server3-mariadb-data --name mariadb-srv-3 factual/mariadb-galera /bin/start node
 ```
 
 # 3 - Restart server1 in "node mode"
